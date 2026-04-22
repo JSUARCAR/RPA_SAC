@@ -1,0 +1,51 @@
+{
+  "timestamp": "mar. 14/04/2026",
+  "total_tests": 7,
+  "passed_tests": 7,
+  "failed_tests": 0,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "name": "Docstring Coverage",
+      "passed": true,
+      "message": "Coverage: 100.0% (Target: >=85.0%)",
+      "details": "Output: ===== Coverage for C:\\Users\\PC\\OneDrive\\Desktop\\ANEXOS_SAC_RPA - copia 2\\ =====\n----------------------------------- Summary -----------------------------------\n| Name                        |     Total |     Miss |     Cover |     Cover% |\n|-----------------------------|-----------|----------|-----------|------------|\n| core\\config_loader.py       |         5 |        0 |         5 |       100% |\n| core\\data_handler.py        |         8 |        0 |         8 |       100% |\n| core\\logger_setup."
+    },
+    {
+      "name": "Pydocstyle NumPy Style",
+      "passed": true,
+      "message": "Critical style issues: 0 (Max allowed: 50)",
+      "details": "Output: core/web_automator.py:736 in private method `_find_attachment_file`:\n        D301: Use r\"\"\" if any backslashes in a docstring\n"
+    },
+    {
+      "name": "Critical Methods Docstrings",
+      "passed": true,
+      "message": "P0 methods documented: 6/10 (min accepted: 6)",
+      "details": "Failed: ['_reinit_driver_and_login: not_numpy_style', 'close: not_numpy_style', 'get_pending_tasks: not_numpy_style']"
+    },
+    {
+      "name": "Tooling Config Files",
+      "passed": true,
+      "message": "Config files present: 5/5",
+      "details": ""
+    },
+    {
+      "name": "Documentation Structure",
+      "passed": true,
+      "message": "Documentation files: 3/3",
+      "details": "Missing: [], GitHub workflow: True"
+    },
+    {
+      "name": "GitHub Actions Workflow",
+      "passed": true,
+      "message": "Workflow components: 4/4",
+      "details": "Checks: []"
+    },
+    {
+      "name": "NumPy Docstring Sections",
+      "passed": true,
+      "message": "Files with NumPy sections: 3/3",
+      "details": ""
+    }
+  ]
+}

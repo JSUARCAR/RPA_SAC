@@ -1,0 +1,26 @@
+# ==============================================================================
+# Documentation Tools Dependencies
+# Proyecto: SAC Automation RPA
+# Purpose: Herramientas para auditoría y generación de documentación
+# ==============================================================================
+
+# Linting y validación de docstrings
+pydocstyle>=6.3.0
+docstring-parser>=0.15
+
+# Cobertura de documentación
+interrogate>=1.5.0
+
+# Type hints (validación estática)
+mypy>=1.8.0
+
+# Generación de documentación
+mkdocs>=1.5.0
+mkdocstrings[python]>=0.24.0
+mkdocs-material>=9.5.0
+
+# Pre-commit hooks
+pre-commit>=3.6.0
+
+# Utilidades adicionales
+colorama>=0.4.6

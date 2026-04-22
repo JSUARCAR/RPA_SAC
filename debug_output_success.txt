@@ -1,0 +1,17 @@
+DEBUG: Starting debug_launcher
+DEBUG: Config loaded. Paths section present.
+DEBUG: Source path: dummy_control.xlsx
+DEBUG: Dest dir: output
+DEBUG: Initializing DataHandler...
+DEBUG: Sheet 'PARAMETROS_LOCALES' not found. Searching by Codename 'Hoja15'...
+DEBUG: Found config sheet by Codename: PARAMETROS_VIEJOS
+DEBUG: Loading config from sheet: PARAMETROS_VIEJOS
+DEBUG: Read User (M2): 'test_user'
+DEBUG: Read Password (N2): '******' (Length: 13)
+DEBUG: DataHandler initialized.
+DEBUG: Calling get_pending_tasks...
+DEBUG: Entering get_pending_tasks. Max row: 10
+DEBUG: Task found at row 9
+DEBUG: Skipping row 10: Date mismatch: 2020-01-01 != 2026-01-02
+DEBUG: Tasks found: 1
+Task: {'row_index': 9, 'asunto': 'Test Subject 1', 'medio': 'M - E-Mail', 'no_pqr': '123456', 'proceso_sac': 'PROC-001'}

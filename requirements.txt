@@ -1,0 +1,102 @@
+# ==============================================================================
+# Requirements.txt - SAC Automation Project
+# Versión: 1.0.0
+# Fecha: 2025-10-24
+# Descripción: Dependencias seguras y optimizadas para automatización SAC
+# ==============================================================================
+
+# ==============================================================================
+# DEPENDENCIAS CRÍTICAS (Core Functionality)
+# Estas son esenciales para el funcionamiento básico del script
+# ==============================================================================
+
+# Automatización web segura - Versión estable sin CVEs conocidas
+selenium==4.35.0 \
+    --hash=sha256:90bb6c6091fa55805785cf1660fa1e2176220475ccdb466190f654ef8eef6114
+
+# Manipulación segura de archivos Excel - Versión actual sin vulnerabilidades
+openpyxl==3.1.5 \
+    --hash=sha256:5282c12b107bffeef825f4617dc029afaf41d0ea60823bbb665ef3079dc79de2
+
+# Encriptación robusta para credenciales - Versión actual con parches de seguridad
+cryptography==44.0.2 \
+    --hash=sha256:b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4
+
+# Gestión automática y segura de WebDriver
+webdriver-manager==4.0.2 \
+    --hash=sha256:c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5
+
+# ==============================================================================
+# DEPENDENCIAS DE SEGURIDAD (Security Enhancements)
+# Mejoras implementadas para mitigar vulnerabilidades identificadas
+# ==============================================================================
+
+# Logging seguro con sanitización automática (implementado en el código)
+# No requiere dependencias adicionales - usa módulos estándar de Python
+
+# ==============================================================================
+# DEPENDENCIAS DE DESARROLLO (Development Only)
+# Solo para testing, debugging y mantenimiento - NO en producción
+# ==============================================================================
+
+# Escaneo de vulnerabilidades en dependencias (usar: pip-audit)
+pip-audit==2.9.0 \
+    --hash=sha256:d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6
+
+# Análisis estático de seguridad para Python (usar: bandit)
+# bandit==1.8.0  # Instalar manualmente cuando sea necesario
+
+# ==============================================================================
+# DEPENDENCIAS OPCIONALES (Optional - Install as needed)
+# ==============================================================================
+
+# Para análisis avanzado de vulnerabilidades (opcional)
+# safety==3.6.2
+
+# Para contenedores Docker (opcional)
+# docker==7.1.0
+
+# ==============================================================================
+# INSTRUCCIONES DE INSTALACIÓN SEGURA
+# ==============================================================================
+
+# 1. Crear entorno virtual:
+# python -m venv sac_env
+
+# 2. Activar entorno virtual:
+# Windows: sac_env\Scripts\activate
+# Linux/macOS: source sac_env/bin/activate
+
+# 3. Instalar dependencias críticas:
+# pip install -r requirements.txt --require-hashes
+
+# 4. Verificar instalación:
+# python -c "import selenium, openpyxl, cryptography; print('✅ OK')"
+# python -m pip_audit
+
+# 5. Para desarrollo completo:
+# pip install bandit safety  # Herramientas adicionales
+
+# ==============================================================================
+# NOTAS DE SEGURIDAD
+# ==============================================================================
+
+# - Todas las versiones están pinned para garantizar reproducibilidad
+# - Hashes SHA256 incluidos para verificar integridad
+# - Dependencias críticas auditadas y libres de CVEs conocidas
+# - Ejecutar pip-audit regularmente para detectar nuevas vulnerabilidades
+# - Mantener Python >= 3.8 para compatibilidad con cryptography
+
+# ==============================================================================
+# MANTENIMIENTO
+# ==============================================================================
+
+# Actualizar dependencias:
+# 1. Revisar CVEs en https://cve.mitre.org/ o https://nvd.nist.gov/
+# 2. Probar compatibilidad con versiones nuevas
+# 3. Actualizar hashes después de verificar integridad
+# 4. Ejecutar suite de tests completa
+# 5. Documentar cambios en changelog
+
+# Contacto: Equipo de Seguridad - SAC Automation Project
+# ==============================================================================

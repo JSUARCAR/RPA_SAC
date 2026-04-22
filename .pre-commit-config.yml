@@ -1,0 +1,55 @@
+# ==============================================================================
+# Pre-commit Configuration
+# Proyecto: SAC Automation RPA
+# Purpose: Hooks de validación de documentación pre-commit
+# ==============================================================================
+
+repos:
+  # Docstring coverage check
+  - repo: local
+    hooks:
+      - id: docstring-coverage
+        name: Docstring Coverage Check
+        entry: interrogate -v --fail-under=85
+        language: system
+        pass_filenames: false
+        types: [python]
+        files: ^(core|src)/.*\.py$
+
+  # Pydocstyle linter
+  - repo: local
+    hooks:
+      - id: pydocstyle-check
+        name: Pydocstyle (NumPy Convention)
+        entry: pydocstyle --convention=numpy --add-ignore=D100,D203,D213
+        language: system
+        pass_filenames: true
+        types: [python]
+        files: ^(core|src)/.*\.py$
+
+  # Trailing whitespace
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        types: [python]
+        exclude: ^(sac_env|docs)/
+
+  # End of file fixer
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: end-of-file-fixer
+        types: [python]
+
+  # Check json
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.1
+    hooks:
+      - id: check-json
+
+  # YAML validation
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml

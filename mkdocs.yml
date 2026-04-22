@@ -1,0 +1,94 @@
+# ==============================================================================
+# MkDocs Configuration
+# Proyecto: SAC Automation RPA
+# Purpose: Generación de documentación HTML
+# ==============================================================================
+
+site_name: SAC Automation RPA
+site_description: Documentación técnica del robot de automatización para carga de anexos SAC
+site_author: Planificador Técnico de Élite
+site_url: https://github.com/anexos-sac-rpa
+
+repo_name: anexos-sac-rpa
+repo_url: https://github.com/anexos-sac-rpa
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\](){}]+'
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            docstring_style: numpy
+            docstring_section_style: spacy
+            merge_init_into_class: true
+            show_category_heading: true
+  - roamlinks
+  - metatags
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.mark
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - Home: index.md
+  - Installation:
+      - Requirements: install/requirements.md
+      - Configuration: install/configuration.md
+  - API Reference:
+      - core/web_automator.md
+      - core/data_handler.md
+      - core/config_loader.md
+      - core/logger_setup.md
+      - core/web_utils.md
+      - src/adaptive_wait.md
+  - Architecture: architecture.md
+  - Troubleshooting: troubleshooting.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/anexos-sac-rpa
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: >
+  SAC Automation RPA - Automatización de carga de anexos para EPM

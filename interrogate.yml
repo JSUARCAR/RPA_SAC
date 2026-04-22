@@ -1,0 +1,40 @@
+# ==============================================================================
+# Interrogate: Docstring Coverage Configuration
+# Proyecto: SAC Automation RPA
+# Purpose: Validar cobertura de documentación
+# ==============================================================================
+
+# Directorios a analizar (separados por comas)
+source: .
+# Patrones de archivos a incluir
+include: "*.py"
+# Patrones de archivos a excluir
+exclude:
+  - "sac_env/**"
+  - "tests/**"
+  - "test_*.py"
+  - "setup.py"
+  - "__pycache__/**"
+# Ignorar métodos __init__ (no todos los devs los documentan)
+ignore_init: true
+# Ignorar métodos privados (prefijados con _)
+ignore_private: false
+# Ignorar métodos internos (prefijados con __)
+ignore_internal: false
+# Mínimo porcentaje de cobertura para pasar
+fail_under: 90
+# Reportar coverage por cada archivo (0=silent, 1=normal, 2=verbose)
+verbose: 2
+# Mostrar missing docs en la salida
+show_missing: true
+# Extensiones de módulo
+module_first: false
+
+# Whitelist de funciones/métodos a ignorar
+# (para casos especiales que no requieren documentación)
+omit_regular_expressions:
+  - "^test_"
+  - "^_TEST_"
+  - "^setup_"
+  - "^__repr__"
+  - "^__str__"

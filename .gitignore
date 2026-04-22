@@ -1,0 +1,55 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+sac_env/
+dev_env/
+
+# Archivos de log
+*.log
+sac_automation.log
+
+# Archivos temporales de Excel
+Control_PQR_*.xlsx
+Control_PQR_*.xlsm
+
+# Archivos de configuración local
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Distribuciones
+dist/
+build/
+*.egg-info/
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Archivos sensibles (no subir a repositorio)
+*credentials*
+*password*
+*secret*
+
+# Reportes de cobertura
+.coverage
+htmlcov/
+
+# Archivos de desarrollo
+requirements-dev.txt
+Pipfile.lock

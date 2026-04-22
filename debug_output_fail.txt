@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+DEBUG: Starting debug_launcher
+DEBUG: Config loaded. Paths section present.
+DEBUG: Source path: dummy_control.xlsx
+DEBUG: Dest dir: output
+DEBUG: Initializing DataHandler...
+CRITICAL ERROR: 'Worksheet PARAMETROS_LOCALES does not exist.'
+  File "C:\Users\PC\OneDrive\Desktop\ANEXOS_SAC_RPA - copia\debug_launcher.py", line 27, in debug_main
+    data_handler = DataHandler(config['Paths'])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\OneDrive\Desktop\ANEXOS_SAC_RPA - copia\core\data_handler.py", line 34, in __init__
+    self.ws_config = self.workbook['PARAMETROS_LOCALES']
+                     ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PC\AppData\Roaming\Python\Python312\site-packages\openpyxl\workbook\workbook.py", line 287, in __getitem__
+    raise KeyError("Worksheet {0} does not exist.".format(key))
+KeyError: 'Worksheet PARAMETROS_LOCALES does not exist.'

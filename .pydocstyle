@@ -1,0 +1,11 @@
+# ==============================================================================
+# Pydocstyle Configuration
+# Proyecto: SAC Automation RPA
+# Convention: NumPy Docstring Style
+# ==============================================================================
+
+[pycodestyle]
+max_line_length = 120
+
+[pydocstyle]
+convention = numpy
