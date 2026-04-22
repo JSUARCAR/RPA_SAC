@@ -3,8 +3,8 @@
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Security Scan](https://img.shields.io/badge/security-pip--audit-green.svg)](https://pypi.org/project/pip-audit/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/your-repo/sac-automation/releases)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/your-repo/sac-automation/actions)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/JSUARCAR/RPA_SAC/releases)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/JSUARCAR/RPA_SAC/actions)
 
 Automatización segura y eficiente para la carga masiva de anexos en el sistema SAC (Sistema de Administración de Contratos) de EPM. Utiliza Selenium WebDriver con medidas avanzadas de seguridad como encriptación de credenciales, sanitización de logs y validación de inputs.
 
@@ -44,8 +44,8 @@ Automatización segura y eficiente para la carga masiva de anexos en el sistema 
 ### 1. Clonar el Repositorio
 
 ```bash
-git clone https://github.com/your-repo/sac-automation.git
-cd sac-automation
+git clone https://github.com/JSUARCAR/RPA_SAC.git
+cd RPA_SAC
 ```
 
 ### 2. Configurar Entorno Virtual
@@ -284,8 +284,8 @@ python --version
 ### 2. Clonar el Proyecto
 
 ```bash
-git clone https://github.com/your-repo/sac-automation.git
-cd sac-automation
+git clone https://github.com/JSUARCAR/RPA_SAC.git
+cd RPA_SAC
 
 # ⚠️ IMPORTANTE: Nunca commiteas archivos sensibles
 # Verifica .gitignore antes de hacer commits
@@ -355,8 +355,8 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 **Equipo de Desarrollo SAC Automation**
 - **Email**: sac-automation@epm.com.co
-- **Proyecto**: [GitHub Repository](https://github.com/your-repo/sac-automation)
-- **Documentación**: [Wiki](https://github.com/your-repo/sac-automation/wiki)
+- **Proyecto**: [GitHub Repository](https://github.com/JSUARCAR/RPA_SAC)
+- **Documentación**: [Wiki](https://github.com/JSUARCAR/RPA_SAC/wiki)
 
 ---
 
