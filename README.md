@@ -104,6 +104,7 @@ El script requiere un archivo Excel con la siguiente estructura:
 ### Credenciales
 
 Las credenciales se almacenan en `PARAMETROS_LOCALES`:
+
 - Celda M2: Usuario
 - Celda N2: Contraseña
 
@@ -122,6 +123,7 @@ export HTTPS_PROXY="http://proxy.company.com:8080"
 ### Ejecución Básica
 
 #### Opción 1: Ejecutable Windows (.bat)
+
 ```batch
 # Doble clic en run_sac_automation.bat
 # O ejecutar desde PowerShell:
@@ -129,6 +131,7 @@ export HTTPS_PROXY="http://proxy.company.com:8080"
 ```
 
 #### Opción 2: Ejecución Manual
+
 ```bash
 # Activar entorno virtual
 source sac_env/bin/activate  # Linux/macOS
@@ -143,6 +146,7 @@ deactivate
 ```
 
 #### Opción 3: Archivo Excel Específico
+
 ```bash
 # Con archivo personalizado
 python sac_automation.py --excel /path/to/your/file.xlsx
@@ -158,6 +162,7 @@ python sac_automation.py --verbose
 ### Procesamiento por Lotes
 
 El script procesa automáticamente todos los registros que cumplan los criterios:
+
 - Fecha del día actual
 - Medio: "Escrito" o "M - E-Mail"
 - Número de proceso válido
@@ -176,6 +181,7 @@ python sac_automation.py
 ```
 
 **Salida esperada:**
+
 ```
 === INICIANDO AUTOMATIZACIÓN SAC ===
 Archivo Excel: Control_PQR_JSUARCAR_EMTELCO.xlsx
@@ -198,15 +204,19 @@ deactivate
 ## 📸 Screenshots
 
 ### Interfaz de Login SAC
+
 ![Login Interface](https://via.placeholder.com/800x600/4CAF50/FFFFFF?text=SAC+Login+Interface)
 
 ### Dashboard de Procesos
+
 ![Process Dashboard](https://via.placeholder.com/800x600/2196F3/FFFFFF?text=SAC+Process+Dashboard)
 
 ### Modal de Carga de Anexos
+
 ![Upload Modal](https://via.placeholder.com/800x600/FF9800/FFFFFF?text=Anexo+Upload+Modal)
 
 ### Reporte de Procesamiento
+
 ![Processing Report](https://via.placeholder.com/800x600/9C27B0/FFFFFF?text=Processing+Report)
 
 ## 🔒 Arquitectura de Seguridad
@@ -214,21 +224,22 @@ deactivate
 ### Medidas Implementadas
 
 1. **Sanitización de Logs (CWE-532)**
+
    - Función `_sanitize_log_message()` reemplaza rutas absolutas con hashes anónimos
    - Función `secure_log()` oculta credenciales y datos sensibles automáticamente
    - Prevención de exposición de información sensible en archivos de log
-
 2. **Validación de Inputs y Directory Traversal (CWE-22)**
+
    - Método `_sanitize_path()` previene ataques de directory traversal
    - Validación de nombres de archivo con regex seguro
    - Verificación de que rutas estén dentro de directorios permitidos
-
 3. **Configuración Hardened de WebDriver**
+
    - Modo incógnito para aislamiento de sesiones
    - Deshabilitación de web security (solo desarrollo local)
    - Ignorar errores de certificado SSL para entornos corporativos
-
 4. **Gestión Segura de Dependencias**
+
    - Versiones pinned con hashes SHA256 en `requirements.txt`
    - Escaneos regulares de vulnerabilidades con `pip-audit`
    - Separación de dependencias críticas vs opcionales
@@ -247,21 +258,25 @@ bandit -r . --format json
 ## 🗺️ Roadmap
 
 ### Versión 1.1.0 (Q1 2025)
+
 - [ ] Soporte para Docker containers
 - [ ] API REST para integración con otros sistemas
 - [ ] Dashboard web para monitoreo en tiempo real
 
 ### Versión 1.2.0 (Q2 2025)
+
 - [ ] Autenticación multifactor (MFA)
 - [ ] Paralelización de procesos
 - [ ] Integración con sistemas de logging centralizados
 
 ### Versión 2.0.0 (Q3 2025)
+
 - [ ] Interfaz gráfica de usuario (GUI)
 - [ ] Soporte para múltiples navegadores
 - [ ] Machine learning para detección de anomalías
 
 ### Mejoras Continuas
+
 - [ ] Mejora de performance
 - [ ] Cobertura de tests al 90%
 - [ ] Documentación técnica completa
@@ -354,12 +369,12 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 ## 📞 Contacto
 
 **Equipo de Desarrollo SAC Automation**
-- **Email**: sac-automation@epm.com.co
+
+- **Email**: joan.suarez@edeq.com.co
 - **Proyecto**: [GitHub Repository](https://github.com/JSUARCAR/RPA_SAC)
-- **Documentación**: [Wiki](https://github.com/JSUARCAR/RPA_SAC/wiki)
 
 ---
 
 ⭐ **Si este proyecto te ayuda, ¡dale una estrella en GitHub!**
 
-*Desarrollado con ❤️ por el equipo de Automatización EPM*
+*Desarrollado con ❤️*
